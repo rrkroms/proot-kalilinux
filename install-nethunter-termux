@@ -170,6 +170,7 @@ function create_launcher() {
 #!/data/data/com.termux/files/usr/bin/bash -e
 cd \${HOME}
 ## pulseaudio trigger
+pulseaudio --start --exit-idle-time=-1
 pacmd load-module module-native-protocol-tcp auth-ip-acl=127.0.0.1 auth-anonymous=1
 ## termux-exec sets LD_PRELOAD so let's unset it before continuing
 unset LD_PRELOAD
