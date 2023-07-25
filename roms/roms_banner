@@ -1,0 +1,13 @@
+#!/bin/bash
+roms_banner(){
+printf "${red} ____  ____  _  __  ____   ___  __  __\n"
+     printf "${red}|  _ \|  _ \| |/ / |  _ \ / _ \|  \/  |___\n"
+     printf "${red}| |_) | |_) | ' /  | |_) | | | | |\/| / __|\n"
+     printf "${red}|  _ <|  _ <| . \  |  _ <| |_| | |  | \__ \ \n"
+     printf "${red}|_| \_\_| \_\_|\_\ |_| \_\\\\\\___/|_|  |_|___/${yellow}Ver.: ${OS_ver}\n"
+     printf "${light_cyan} HYBRID  OPRATING  SYSTEMs  ANDROID VARIANT\n"
+     printf "\n"
+     printf ${green}
+read -rp "Press Enter to fill the New ERA"
+     printf ${reset}
+}

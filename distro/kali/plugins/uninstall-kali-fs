@@ -1,0 +1,19 @@
+#!/bin/bash
+source rom_ui
+CHROOT="kali-arm64"
+if [ -d ~/${CHROOT} ] ; then
+	ask t N "you want to remove ${CHROOT}?" &&
+	 tell i "removing ${CHROOT}"&&
+	sleep 3 &&
+	printf "${red}"
+	 rm -vrf ~/${CHROOT} 
+	printf "${reset}"
+else
+
+	tell t "${CHROOT} not exiest!"
+fi
+
+if [[ -e "/data/data/com.termux/files/usr/bin/nh" || -e "/data/data/com.termux/files/usr/bin/nethunter" ]] ; then	
+	tell i "removing ${CHROOT} launcher script.."
+	rm -vrf "/data/data/com.termux/files/usr/bin/nh" "/data/data/com.termux/files/usr/bin/nethunter"
+fi
